@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// News API configuration
-const NEWS_API_KEY = '96574c13871048caa5e33dfeb828f9be';
-const NEWS_API_BASE_URL = 'https://newsapi.org/v2';
+// News API configuration from environment variables
+const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY || '96574c13871048caa5e33dfeb828f9be';
+const NEWS_API_BASE_URL = import.meta.env.VITE_NEWS_API_BASE_URL || 'https://newsapi.org/v2';
 
 // Create axios instance for News API
 const API = axios.create({
